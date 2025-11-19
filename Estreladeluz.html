@@ -1,280 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrela de Luz C10</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- SEÇÃO DE VARIÁVEIS DE CORES --- */
-        :root {
-            --preto: #000000;
-            --branco: #ffffff;
-            --dourado: #f9c802;
-            --azul: #add8e6;
-            --laranja: #ff8c00;
-            --vermelho: #ff0000;
-            --marrom: #a0522d;
-            --cinza-escuro: #1a1a1a;
-            --cinza-medio: #333;
-            --cinza-claro: #aaa;
-            --verde-whatsapp: #25D366;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, var(--preto), var(--cinza-escuro));
-            color: var(--branco);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
-            box-sizing: border-box; /* Inclui padding na altura total */
-        }
-
-        .header {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 30px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        .header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--branco);
-            object-fit: cover; /* Garante que a imagem preencha o círculo */
-        }
-
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-            background: linear-gradient(45deg, var(--dourado), var(--laranja));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .desc {
-            font-size: 14px;
-            color: var(--cinza-claro);
-            margin-bottom: 10px;
-        }
-
-        .glow-box {
-            background-color: #111;
-            border: 1px solid var(--cinza-medio);
-            border-radius: 16px;
-            padding: 16px;
-            margin: 12px 0;
-            width: 90%;
-            max-width: 420px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(255,255,255,0.05);
-            overflow: hidden; /* Garante que o iframe com border-radius não "vaze" */
-        }
-
-        .glow-box:hover {
-            box-shadow: 0 0 18px rgba(255,255,255,0.15);
-        }
-
-        .glow-box a {
-            color: var(--branco);
-            text-decoration: none;
-            font-weight: 600;
-            display: block; /* Para que o span fique abaixo */
-        }
-
-        .glow-box span {
-            display: block;
-            font-size: 12px;
-            color: #666;
-            margin-top: 4px;
-        }
-
-        /* Estilos específicos para o iframe do mapa dentro do glow-box */
-        .glow-box iframe {
-            width: 100%; /* Ocupa a largura total do glow-box */
-            height: 300px; /* Altura fixa para ser quadrado em relação ao max-width */
-            max-width: 300px; /* Limita a largura em telas maiores, mantendo-o pequeno */
-            border-radius: 16px; /* Bordas arredondadas, igual ao glow-box */
-            display: block; /* Para centralizar o iframe */
-            margin: 10px auto 0 auto; /* Centraliza e adiciona margem superior */
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Sombra para o mapa */
-        }
-
-        .footer {
-            margin-top: auto; /* Empurra o rodapé para a parte inferior */
-            padding-top: 30px;
-            font-size: 13px;
-            color: var(--cinza-claro);
-            text-align: center;
-        }
-
-        .footer a {
-            color: var(--verde-whatsapp);
-            text-decoration: none;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            background-color: var(--verde-whatsapp);
-            color: var(--branco) !important;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1DA851;
-            transform: translateY(-2px);
-        }
-
-        .copyright {
-            margin-top: 15px;
-            font-size: 12px;
-            color: var(--cinza-claro);
-        }
-
-        @keyframes fadeIn {
-            0% {opacity: 0; transform: translateY(-10px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
-    </style>
+    <meta name="description" content="Estrela de Luz C10 - Juventude, Ministério Infantil e Família. Conecte-se conosco através das nossas redes sociais e venha nos visitar!">
+    <meta name="keywords" content="igreja, Estrela de Luz, C10, juventude, ministério infantil, congregação">
+    <meta name="author" content="Estrela de Luz C10">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://estreladeluzc10.com/">
+    <meta property="og:title" content="Estrela de Luz C10">
+    <meta property="og:description" content="Juventude • Ministério Infantil • Família">
+    <meta property="og:image" content="assets/images/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://estreladeluzc10.com/">
+    <meta property="twitter:title" content="Estrela de Luz C10">
+    <meta property="twitter:description" content="Juventude • Ministério Infantil • Família">
+    <meta property="twitter:image" content="assets/images/og-image.png">
+    
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <title>Estrela de Luz C10 - Juventude • Ministério Infantil • Família</title>
+    
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <script>
-        const siteConfig = {
-            profileImage: "logo.jpg",
-            siteTitle: "Estrela de Luz C10",
-            siteDescription: "Juventude • Ministério Infantil • Família",
-            links: [
-                {
-                    name: "Instagram da Juventude",
-                    url: "https://www.instagram.com/juventude_estrela_de_luz_c10?igsh=MW8wZXNxbGRhdmhrYg==",
-                    description: "@juventude_estrela_de_luz_c10",
-                    type: "link"
-                },
-                {
-                    name: "Instagram do Ministério Infantil",
-                    url: "https://www.instagram.com/harmonia_kids_2025?igsh=MW95b3puNTVoYnQ1ag==",
-                    description: "@harmonia_kids_2025",
-                    type: "link"
-                },
-                {
-                    name: "Instagram da Coreografia",
-                    url: "https://www.instagram.com/filhasdaluz_oficial/",
-                    description: "@shekinah_oficial25",
-                    type: "link"
-                },
-                {
-                    name: "Facebook da Congregação",
-                    url: "https://www.facebook.com/share/14E2zsggEei/?mibextid=wwXIfr",
-                    description: "facebook.com/EstrelaDeLuzC10",
-                    type: "link"
-                },
-                {
-                    name: "Localização da Igreja",
-                    url: "https://maps.app.goo.gl/K1AE3xWb7Q4sHDLz6?g_st=ac",
-                    description: "Ver no Google Maps",
-                    type: "link"
-                },
-                {
-                    name: "Nosso Local", // Título para o container do mapa
-                    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467.7139238591334!2d-47.43551285740527!3d-5.514986155444828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92cff58312db43a9%3A0xb0df494e42f5d03d!2sIgreja%20Evangelica%20Assembleia%20de%20Deus%20-%20Congrega%C3%A7%C3%A3o%20Estrela%20de%20Luz!5e1!3m2!1spt-BR!2sbr!4v1753394489945!5m2!1spt-BR!2sbr", // URL do iframe do mapa - **Atualizei com um link real**
-                    description: "Veja no mapa interativo",
-                    type: "map" // Novo tipo para identificar o mapa
-                }
-            ],
-            pastorName: "Pr. Cláudio Venâncio",
-            whatsappNumber: "5599992010580"
-        };
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.header');
-            const linksContainer = document.body; // Onde os glow-boxes serão inseridos
-            const footer = document.querySelector('.footer');
-
-            // Atualizar cabeçalho
-            header.querySelector('img').src = siteConfig.profileImage;
-            header.querySelector('.title').textContent = siteConfig.siteTitle;
-            header.querySelector('.desc').textContent = siteConfig.siteDescription;
-
-            // Adicionar links e o mapa
-            siteConfig.links.forEach(link => {
-                const glowBox = document.createElement('div');
-                glowBox.classList.add('glow-box');
-
-                if (link.type === "map") {
-                    // Se for um item do tipo "mapa", cria o iframe
-                    const mapTitle = document.createElement('div');
-                    mapTitle.style.fontWeight = '600';
-                    mapTitle.style.marginBottom = '5px';
-                    mapTitle.textContent = link.name;
-                    glowBox.appendChild(mapTitle);
-
-                    const mapDescription = document.createElement('span');
-                    mapDescription.textContent = link.description;
-                    glowBox.appendChild(mapDescription);
-
-                    const iframeElement = document.createElement('iframe');
-                    iframeElement.src = link.url;
-                    iframeElement.style.border = "0"; // Estilo de borda já definido no CSS
-                    iframeElement.allowFullscreen = true;
-                    iframeElement.loading = "lazy";
-                    iframeElement.referrerPolicy = "no-referrer-when-downgrade";
-                    iframeElement.title = link.name; // Título para acessibilidade
-
-                    glowBox.appendChild(iframeElement);
-
-                } else {
-                    // Se for um link normal, cria o elemento <a>
-                    const linkElement = document.createElement('a');
-                    linkElement.href = link.url;
-                    linkElement.target = "_blank";
-                    linkElement.textContent = link.name;
-
-                    const spanElement = document.createElement('span');
-                    spanElement.textContent = link.description;
-                    linkElement.appendChild(spanElement);
-
-                    glowBox.appendChild(linkElement);
-                }
-                // Insere o glow-box antes do rodapé
-                linksContainer.insertBefore(glowBox, footer);
-            });
-
-            // Atualizar rodapé
-            footer.innerHTML = `
-                👤 ${siteConfig.pastorName}<br>
-                <a href="https://wa.me/${siteConfig.whatsappNumber}" target="_blank" class="whatsapp-button">Fale com o Pastor</a>
-
-<br>
-<br>
-<br>
-                <div class="copyright">
-                    © ${new Date().getFullYear()} - Todos os direitos reservados<br>
-                    Desenvolvido por José Renato - Jr_Tech_OFC Fotografia
-                </div>
-            `;
-        });
-    </script>
-
-    <div class="header">
-        <img src="" alt="Perfil">
-        <div class="title"></div>
-        <div class="desc"></div>
+    <!-- Tela de Splash com Versículo -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="verse-container">
+            <div class="church-info">
+                <h1 class="church-name" id="churchName">Estrela de Luz C10</h1>
+                <p class="pastor-name" id="pastorName">Pr. Cláudio Venâncio</p>
+                <p class="church-address" id="churchAddress">Igreja Evangélica Assembleia de Deus<br>Congregação Estrela de Luz</p>
+            </div>
+            <p class="verse-text">
+                "No demais, irmãos meus, fortalecei-vos no Senhor e na força do seu poder."
+            </p>
+            <p class="verse-reference">Efésios 6:10</p>
+        </div>
     </div>
 
-    <div class="footer">
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <header class="header">
+            <img src="" alt="Logo Estrela de Luz C10" loading="eager">
+            <h1 class="title"></h1>
+            <p class="desc"></p>
+        </header>
+
+        <footer class="footer">
+        </footer>
     </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

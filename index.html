@@ -1,91 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Redirecionando...</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  <meta http-equiv="refresh" content="4; url=Estreladeluz.html" />
-  <style>
-    :root {
-      --preto: #000000;
-      --branco: #ffffff;
-      --dourado: #f9c802;
-      --laranja: #ff8c00;
-      --cinza: #1a1a1a;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Redirecionando para Estrela de Luz C10">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <title>Redirecionando... - Estrela de Luz C10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content="3; url=Estreladeluz.html" />
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
 
-    body {
-      background: linear-gradient(135deg, var(--preto), var(--cinza));
-      color: var(--branco);
-      font-family: 'Montserrat', sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      overflow: hidden;
-    }
+        h1 {
+            font-size: 32px;
+            margin-top: 20px;
+            background: linear-gradient(45deg, var(--dourado), var(--laranja), var(--dourado));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1.5s ease-in-out, shimmer 3s linear infinite;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
 
-    h1 {
-      font-size: 28px;
-      margin-top: 20px;
-      background: linear-gradient(45deg, var(--dourado), var(--laranja));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeIn 1.5s ease-in-out;
-    }
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
 
-    p {
-      font-size: 14px;
-      color: #ccc;
-      margin-top: 8px;
-      animation: fadeIn 2.5s ease-in-out;
-    }
+        p {
+            font-size: 16px;
+            color: #ccc;
+            margin-top: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    .loader {
-      margin-top: 40px;
-      width: 48px;
-      height: 48px;
-      border: 5px solid var(--laranja);
-      border-bottom-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+        .loader {
+            margin-top: 40px;
+            width: 56px;
+            height: 56px;
+            border: 5px solid rgba(255, 140, 0, 0.2);
+            border-top-color: var(--laranja);
+            border-right-color: var(--dourado);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+        .loader::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(249, 200, 2, 0.3);
+            border-top-color: var(--dourado);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: spin 0.8s linear infinite reverse;
+        }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 12px;
-      color: #999;
-    }
-  </style>
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .redirect-link {
+            margin-top: 30px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .redirect-link a {
+            color: var(--dourado);
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid var(--dourado);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .redirect-link a:hover {
+            background: var(--dourado);
+            color: var(--preto);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(249, 200, 2, 0.4);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            color: #999;
+            z-index: 1;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 24px; }
+            p { font-size: 14px; }
+        }
+    </style>
 </head>
 <body>
-  <h1>Bem-vindo ao Portal <br> Estrela de Luz C10</h1>
-  <p>Você será redirecionado em instantes...</p>
-  <div class="loader"></div>
+    <div class="content">
+        <h1>Bem-vindo ao Portal <br> Estrela de Luz C10</h1>
+        <p>Você será redirecionado em instantes...</p>
+        <div class="loader" aria-label="Carregando"></div>
+        <div class="redirect-link">
+            <a href="Estreladeluz.html">Clique aqui se não for redirecionado</a>
+        </div>
+    </div>
 
-  <footer>
-    © 2025 - Desenvolvido por Jr_Tech_OFC
-  </footer>
+    <footer>
+        © 2025 - Desenvolvido por Jr_Tech_OFC
+    </footer>
 </body>
 </html>
