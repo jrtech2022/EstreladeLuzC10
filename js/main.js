@@ -73,9 +73,17 @@ function updateHeader(header) {
  * Cria os cards de links e mapa
  */
 function createLinks(container, footer) {
+    // Cria container para os links
+    let linksContainer = container.querySelector('.links-container');
+    if (!linksContainer) {
+        linksContainer = document.createElement('div');
+        linksContainer.className = 'links-container';
+        container.insertBefore(linksContainer, footer);
+    }
+    
     siteConfig.links.forEach((link, index) => {
         const glowBox = createGlowBox(link, index);
-        container.insertBefore(glowBox, footer);
+        linksContainer.appendChild(glowBox);
     });
 }
 
@@ -91,8 +99,8 @@ function createGlowBox(link, index) {
         glowBox.classList.add(link.category);
     }
     
-    // Define delay de animação
-    glowBox.style.animationDelay = `${4.5 + (index + 1) * 0.1}s`;
+    // Define delay de animação (após splash screen desaparecer)
+    glowBox.style.animationDelay = `${4.5 + (index + 1) * 0.15}s`;
     
     if (link.type === "map") {
         createMapBox(glowBox, link);
